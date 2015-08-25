@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="large-12 columns text-center">
+    <h2>Order Form</h2>
+  </div>
+</div>
+
+<form action="/checkout" method="post">
+
+<div class="row">
+    <fieldset>
+      <legend>Enter Your Credentials</legend>
+      <div class="large-12 columns">
+        <input type="text" name="firstname" required placeholder="i.e. Maximillian">
+        <input type="text" name="lastname" required placeholder="i.e. Sanchezimso IV">
+      </div>
+    </fieldset>
+</div>
+
+<fieldset>
+  <legend>Browse our selection</legend>
+<table class="text-center">
+  <tr>
+    <th>Name:</th>
+    <th>Description:</th>
+    <th>Price:</th>
+    <th>Add to Cart:</th>
+  </tr>
+  <% @products.each do |product| %>
+    <tr >
+      <td><%= product.name  %></td>
+      <td><%= product.description %></td>
+      <td>$<%= product.price %></td>
+      <td><center><input type="checkbox" name="<%= product.name %>" value="<%= product.id %>"></center></td>
+    </tr>
+  <% end %>
+</table>
+</fieldset>
+
+
+<div class="row">
+  <div class="large-12 columns text-center">
+    <button type="submit">Submit</button>
+  </div>
+</div>
+
+</form>

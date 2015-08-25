@@ -6,7 +6,7 @@ require('./lib/customer')
 require('./lib/product')
 require('./lib/order')
 also_reload('lib/**/*.rb')
-# require 'pry'
+require 'pry'
 
 after do
   ActiveRecord::Base.connection.close
@@ -30,7 +30,6 @@ get '/products/:id' do
 	erb :product
 end
 
-
 post '/products' do
 	price = params['price']
 	name = params['name']
@@ -51,4 +50,33 @@ patch '/products/:id' do
 	description = params['description']
 	product.update(name: name, price: price, description: description)
 	redirect '/products'
+end
+
+get '/products/:id/delete' do
+	product = Product.find(params['id'])
+	product.destroy
+	redirect '/products'
+end
+
+get '/shop' do
+	@products = Product.all
+	erb :shop
+end
+
+post '/checkout' do
+  firstname = params['firstname']
+  lastname  = params['lastname']
+  @customer  = Customer.create({firstname: firstname, lastname: lastname})
+  @order     = Order.create(customer_id: @customer.id, total: 50)
+
+  new_params = params.reject! { |k,v| k == 'firstname' || k == 'lastname' }
+  @sum = 0
+  new_params.keys.each do |key|
+    product = Product.find_by(name: key)
+    product.update({order_id: @order.id})
+    @sum += product.price
+  end
+  @order.update({total: @sum})
+
+  erb :confirmation
 end

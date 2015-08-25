@@ -1,0 +1,7 @@
+<h2>confirmation</h2>
+
+<% @order.products.each do |product| %>
+  <%= product.name %>
+<% end %>
+
+You owe us <%= @sum %> bucks.

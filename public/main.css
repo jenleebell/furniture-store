@@ -17,7 +17,7 @@ body {
 
 p, h1, h2, h3 {
   color:white;
-
+  character-spacing: 1px;
 }
 
 a {
@@ -27,4 +27,21 @@ a {
 a.hover {
   color:white;
 
+}
+
+label {
+  color: brown;
+
+}
+
+form, table {
+  margin: 2em auto;
+}
+
+h2 {
+  color:
+}
+
+.extra-margin {
+  margin-top: 3em;
 }
