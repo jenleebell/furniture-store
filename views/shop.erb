@@ -16,8 +16,7 @@
     </fieldset>
 </div>
 
-<fieldset>
-  <legend>Browse our selection</legend>
+
 <table class="text-center">
   <tr>
     <th>Name:</th>
@@ -29,12 +28,11 @@
     <tr >
       <td><%= product.name  %></td>
       <td><%= product.description %></td>
-      <td>$<%= product.price %></td>
+      <td>$<%= product.price %>0</td>
       <td><center><input type="checkbox" name="<%= product.name %>" value="<%= product.id %>"></center></td>
     </tr>
   <% end %>
 </table>
-</fieldset>
 
 
 <div class="row">

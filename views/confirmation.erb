@@ -1,7 +1,14 @@
-<h2>confirmation</h2>
+<div class="row">
+  <div class="text-center large-12 columns">
+    <h2>Your Purchase Summary:</h2>
+  </div>
+</div>
 
-<% @order.products.each do |product| %>
-  <%= product.name %>
-<% end %>
-
-You owe us <%= @sum %> bucks.
+<ul class="pricing-table">
+  <li class="title">Madame/Sir <em><%= @customer.firstname.capitalize %> <%= @customer.lastname.capitalize %></em></li>
+  <li class="price">$<%= @sum %></li>
+  <% @order.products.each do |product| %>
+    <li class="bullet-item"><%= product.name %> | $<%= product.price %>0</li>
+  <% end %>
+  <li class="cta-button"><a class="button" href="/">Buy More?</a></li>
+</ul>

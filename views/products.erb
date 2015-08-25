@@ -5,15 +5,15 @@
     <th>Name:</th>
     <th>Description:</th>
     <th>Price:</th>
-    <th>Show:</th>
-    <th>Edit:</th>
-    <th>Delete:</th>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
   <% @products.each do |product| %>
     <tr>
       <td><%= product.name  %></td>
       <td><%= product.description %></td>
-      <td>$<%= product.price %></td>
+      <td>$<%= product.price %>0</td>
       <td><a href="/products/<%= product.id %>">View</a></td>
       <td><a href="/products/<%= product.id %>/edit">Update</a></td>
       <td><a href="/products/<%= product.id %>/delete">Destroy</a></td>
