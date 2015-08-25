@@ -1,12 +1,10 @@
 class Customer < ActiveRecord::Base
   has_many :orders
+  before_save(:downcase_lastname)
+  before_save(:downcase_firstname)
 
   validates(:firstname, {:presence => true, :length => { :maximum => 20 }})
   validates(:lastname, {:presence => true, :length => { :maximum => 20 }})
-  before_save(:downcase_firstname)
-  before_save(:downcase_lastname)
-
-
 
 
   def fullname
