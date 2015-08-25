@@ -9,7 +9,7 @@ describe Order do
   before { @product  = Product.create({price: 50.00, name: 'Stuff', description: 'A stuff-like thing.', order_id: @order.id})}
   describe 'fullname' do
     it "returns the fullname of the customer" do
-      expect(@customer.fullname).to eq 'Bob Bobson'
+      expect(@customer.fullname).to eq 'bob bobson'
     end
   end
 
