@@ -1,0 +1,11 @@
+<form action="/products/<%= @product.id %>" method="post">
+  <div>
+    <input name="_method" type="hidden" value="patch">
+    <input id="name" name="name" type="test" placeholder="Name" value="<%= @product.name %>">
+    <input id="description" name="description" type="test" placeholder="Description" value="<%= @product.description %>">
+    <input id="price" name="price" type="test" placeholder="Price" value="<%= @product.price %>">
+
+  </div>
+
+  <button type="submit">Update Item</button>
+</form>

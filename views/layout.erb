@@ -1,6 +1,6 @@
 <html>
 	<head lang='en'>
-		<title>point-of-sale</title>
+		<title>Mid Century Moedehrn :: MCM Grande</title>
 		<link rel='stylesheet' type='text/css' href='http://cdn.foundation5.zurb.com/foundation.css'>
 		<script src='//code.jquery.com/jquery-1.11.3.min.js'></script>
 		<script src='http://cdn.foundation5.zurb.com/foundation.js'></script>
@@ -8,6 +8,25 @@
 	</head>
 	<body>
 		<div id='site-wrapper' class='container'>
+			<nav class="top-bar" data-topbar role="navigation">
+			  <ul class="title-area">
+			    <li class="name">
+			      <h1><a href="/"><font color="orange">MCM </font>:: Mid Century Moedehrn</a></h1>
+			    </li>
+			    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			  </ul>
+			  <section class="top-bar-section">
+			    <ul class="right">
+			      <li class="has-dropdown">
+			        <a href="#">Portals </a>
+			        <ul class="dropdown">
+			          <li><a href="/products">Manager</a></li>
+			          <li class="active"><a href="/customers">Customer</li></a>
+			        </ul>
+			      </li>
+			    </ul>
+			  </section>
+			</nav>
 			<%= yield %>
 		</div>
 		<script>

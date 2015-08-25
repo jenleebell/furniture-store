@@ -1,0 +1,30 @@
+body {
+    background:url('http://billydsgn.com/wp-content/uploads/2015/02/interior-fireplace-corner-modern-interior-design-architecture-fireplace-insert-gas-fire-masonary-lifestyle-glamorous-gorgeous-stone-with-mantel-midcentury-style-awesome-s-electric-fireplace-built-into.jpg') center center fixed;
+    	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.button {
+  background-color:orange;
+}
+
+.button:hover {
+  background-color:#94bf4d;
+}
+
+p, h1, h2, h3 {
+  color:white;
+
+}
+
+a {
+  color:orange;
+}
+
+a.hover {
+  color:white;
+
+}

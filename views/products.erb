@@ -1,0 +1,23 @@
+<% if @products %>
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Description:</th>
+    <th>Price:</th>
+    <th>Show:</th>
+    <th>Edit:</th>
+    <th>Delete:</th>
+  </tr>
+  <% @products.each do |product| %>
+    <tr>
+      <td><%= product.name  %></td>
+      <td><%= product.description %></td>
+      <td>$<%= product.price %></td>
+      <td><a href="/products/<%= product.id %>">View</a></td>
+      <td><a href="/products/<%= product.id %>/edit">Update</a></td>
+      <td><a href="/products/<%= product.id %>/delete">Destroy</a></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>
+<a class='button' href="/products/new">Add New Item</a>
