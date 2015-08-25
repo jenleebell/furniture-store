@@ -1,0 +1,17 @@
+<html>
+	<head lang='en'>
+		<title>point-of-sale</title>
+		<link rel='stylesheet' type='text/css' href='http://cdn.foundation5.zurb.com/foundation.css'>
+		<script src='//code.jquery.com/jquery-1.11.3.min.js'></script>
+		<script src='http://cdn.foundation5.zurb.com/foundation.js'></script>
+		<link rel='stylesheet' type='text/css' href="<%= url('/main.css') %>">
+	</head>
+	<body>
+		<div id='site-wrapper' class='container'>
+			<%= yield %>
+		</div>
+		<script>
+			$(document).foundation();
+		</script>
+	</body>
+</html>
